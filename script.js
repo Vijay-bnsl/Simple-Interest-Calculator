@@ -11,7 +11,7 @@ function computeInterest()
      var rate = document.getElementById("rate").value;
      var years = document.getElementById("years").value;
      //Calculate Interest
-     var interest = parseInt((principal * years * rate) /100);
+     var interest = principal * years * rate /100;
      var year = new Date().getFullYear()+parseInt(years) ;
      var amount = principal*Math.pow((1+rate/100),years);
 	 
@@ -23,5 +23,5 @@ function computeInterest()
 function updateRate() 
 {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText=rateval +"%";
+    document.getElementById("rate_val").innerText=rateval;
 }
